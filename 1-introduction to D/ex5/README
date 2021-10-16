@@ -1,0 +1,6 @@
+The algorithm which uses structs is much slower than the one which uses classes
+for string data.  (436030 usecs vs 980 usecs).
+I think this is because structs are value types and every time that struct is 
+passed to the function, a copy of it is stored, whereas classes are referece 
+types, and the function receives a reference to that object, without creating a 
+new one.
